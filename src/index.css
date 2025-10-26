@@ -55,3 +55,17 @@
 /* body {
   font-family: 'Pretendard-Regualr';
 } */
+
+@theme {
+  --color-white: #fffefc;
+  --color-white-100: #f1f2fa;
+  --color-primary: #42cdad;
+  --color-primary-100: #50ffd7;
+  --color-primary-300: #46e5c0;
+  --color-grey-100: #f4f4f4;
+  --color-grey-200: #eaeaea;
+  --color-grey-300: #b6b6b6;
+  --color-grey-500: #6c6c6c;
+  --color-navy-700: #172a3a;
+  --color-black: #1c1c1c;
+}
