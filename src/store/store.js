@@ -1,6 +1,6 @@
 import { create } from "zustand";
 
-const useKeywordStore = create((set) => ({
+export const useKeywordStore = create((set) => ({
   keywords: ["무가당", "단백질", "유산균", "울랄라", "어쩌고", "키워드"],
   selected: new Set(),
   maxSelected: 3,
@@ -21,8 +21,7 @@ const useKeywordStore = create((set) => ({
   clearSelected: () => set({ selected: new Set() }),
 }));
 
-// const usePriceStore = create((set)=>({
-//   price = null;
-// }))
-
-export default useKeywordStore;
+export const usePriceStore = create((set) => ({
+  price: [1000, 100000], // [min, max]
+  setPrice: (val) => set({ price: val }),
+}));

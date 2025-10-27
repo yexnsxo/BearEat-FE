@@ -22,7 +22,7 @@ const NavigatePage = () => {
         fadeIn ? "opacity-100" : "opacity-0"
       }`}
     >
-      <div className="relative min-h-screen flex flex-col justify-center items-center w-[390px]">
+      <div className="relative min-h-screen flex flex-col justify-center items-center w-[390px] bg-white">
         <div className="text-navy-700 font-bold text-[30px] leading-tight mb-12 mt-18 -ml-10">
           <div>나에게 꼭 맞는</div>
           <div className="inline-flex items-center justify-center">

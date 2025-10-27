@@ -3,7 +3,7 @@ import Progress1 from "../../assets/Progress1.svg?react";
 import ReturnArrow from "../../assets/ReturnArrow.svg?react";
 import { Link, useNavigate } from "react-router-dom";
 import NextButton from "../../components/Onboarding/NextButton";
-import useKeywordStore from "../../store/store";
+import { useKeywordStore } from "../../store/store";
 
 const Onboarding1 = () => {
   const keywords = useKeywordStore((s) => s.keywords);
@@ -13,7 +13,7 @@ const Onboarding1 = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="w-screen flex items-center justify-center">
+    <div className="w-screen flex items-center justify-center bg-white">
       <div className="w-[390px]">
         <div className="relative flex justify-center items-center mt-[58px]">
           <ReturnArrow
@@ -44,7 +44,7 @@ const Onboarding1 = () => {
             최대 3개 선택 가능
           </div>
         </div>
-        <div className="mt-[83px] -mr-[280px]">
+        <div className="mt-[120px] px-6 flex justify-end">
           <NextButton ment="다음" direction="onboarding2" />
         </div>
       </div>
