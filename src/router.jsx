@@ -6,6 +6,7 @@ import Onboarding2 from "./pages/Onboarding/Onboarding2";
 import Onboarding3 from "./pages/Onboarding/Onboarding3";
 import Onboarding4 from "./pages/Onboarding/Onboarding4";
 import Onboarding5 from "./pages/Onboarding/Onboarding5";
+import Loading from "./pages/Loading";
 import App from "./App.jsx";
 
 const router = createBrowserRouter([
@@ -20,6 +21,7 @@ const router = createBrowserRouter([
       { path: "onboarding3", element: <Onboarding3 /> },
       { path: "onboarding4", element: <Onboarding4 /> },
       { path: "onboarding5", element: <Onboarding5 /> },
+      { path: "loading", element: <Loading /> },
     ],
   },
 ]);
