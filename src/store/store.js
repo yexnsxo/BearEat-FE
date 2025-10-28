@@ -25,3 +25,23 @@ export const usePriceStore = create((set) => ({
   price: [1000, 100000], // [min, max]
   setPrice: (val) => set({ price: val }),
 }));
+
+export const useCategoryStore = create((set) => ({
+  categories: ["음료", "간식 & 디저트", "식사 대체 & 간편식", "조리 재료"],
+  selected: new Set(),
+  maxSelected: 1,
+  toggleCategory: (c) =>
+    set((state) => {
+      const next = new Set(state.selected);
+      if (next.has(c)) {
+        next.delete(c);
+        return { selected: next };
+      }
+      if (state.maxSelected === 1) {
+        return { selected: new Set([c]) };
+      }
+      next.add(c);
+      return { selected: next };
+    }),
+  clearSelected: () => set({ selected: new Set() }),
+}));

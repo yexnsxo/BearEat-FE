@@ -50,7 +50,7 @@ const Onboarding2 = () => {
           </div>
         </div>
         <div className="mt-[116px] px-6 flex justify-end">
-          <NextButton ment="다음" direction="onboarding2" />
+          <NextButton ment="다음" direction="onboarding3" />
         </div>
       </div>
     </div>
