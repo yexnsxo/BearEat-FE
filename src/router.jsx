@@ -8,6 +8,7 @@ import Onboarding4 from "./pages/Onboarding/Onboarding4";
 import Onboarding5 from "./pages/Onboarding/Onboarding5";
 import Loading from "./pages/Loading";
 import ResultPage from "./pages/ResultPage";
+import CheckPage from "./pages/Onboarding/CheckPage";
 import App from "./App.jsx";
 
 const router = createBrowserRouter([
@@ -22,6 +23,7 @@ const router = createBrowserRouter([
       { path: "onboarding3", element: <Onboarding3 /> },
       { path: "onboarding4", element: <Onboarding4 /> },
       { path: "onboarding5", element: <Onboarding5 /> },
+      { path: "check", element: <CheckPage /> },
       { path: "loading", element: <Loading /> },
       { path: "result", element: <ResultPage /> },
     ],
