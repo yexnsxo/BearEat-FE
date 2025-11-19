@@ -1,13 +1,10 @@
 import React from "react";
-import Progress3 from "@/assets/Progress3.svg?react";
-import { useNavigate } from "react-router-dom";
-import ReturnArrow from "@/assets/ReturnArrow.svg?react";
 import NextButton from "@/components/Onboarding/NextButton";
 import { useCategoryStore } from "@/store/store";
 import Button2 from "@/components/Onboarding/Button2";
+import ProgressBar from "@/components/Onboarding/ProgressBar";
 
 const Onboarding3 = () => {
-  const navigate = useNavigate();
   const categories = useCategoryStore((c) => c.categories);
   const selected = useCategoryStore((c) => c.selected);
   const toggleCategory = useCategoryStore((c) => c.toggleCategory);
@@ -18,17 +15,10 @@ const Onboarding3 = () => {
   return (
     <div className="flex items-center justify-center">
       <div className="w-[390px] flex flex-col items-center justify-center bg-white">
-        <div className="relative flex justify-center items-center mt-[58px]">
-          <ReturnArrow
-            onClick={() => navigate(-1)}
-            className="absolute -left-30 top-1/2 -translate-y-1/2 cursor-pointer"
-          />
-          <Progress3 />
-        </div>
-        <h1 className="font-[bold] text-navy-700 text-[30px] mt-[92px]">
+        <ProgressBar step={3} />
+        <h1 className="font-[bold] text-navy-700 w-full pl-[53px] text-[30px] mt-[92px]">
           원하시는
-          <br />
-          <span className="text-primary">식품 종류</span>를 선택해주세요
+          <span className="text-primary"> 식품 종류</span>를<br /> 선택해주세요
         </h1>
         <div className="flex flex-col relative">
           <div className="flex flex-col gap-4 mt-10">

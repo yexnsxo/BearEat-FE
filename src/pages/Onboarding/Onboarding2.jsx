@@ -1,13 +1,10 @@
 import React from "react";
-import Progress2 from "@/assets/Progress2.svg?react";
-import { useNavigate } from "react-router-dom";
-import ReturnArrow from "@/assets/ReturnArrow.svg?react";
 import NextButton from "@/components/Onboarding/NextButton";
 import { usePriceStore } from "@/store/store";
 import * as Slider from "@radix-ui/react-slider";
+import ProgressBar from "@/components/Onboarding/ProgressBar";
 
 const Onboarding2 = () => {
-  const navigate = useNavigate();
   const price = usePriceStore((s) => s.price);
   const setPrice = usePriceStore((s) => s.setPrice);
   const fmt = (n) => new Intl.NumberFormat("ko-KR").format(n) + "원";
@@ -15,17 +12,10 @@ const Onboarding2 = () => {
   return (
     <div className="flex items-center justify-center">
       <div className="w-[390px] flex flex-col items-center justify-center bg-white">
-        <div className="relative flex justify-center items-center mt-[58px]">
-          <ReturnArrow
-            onClick={() => navigate(-1)}
-            className="absolute -left-30 top-1/2 -translate-y-1/2 cursor-pointer"
-          />
-          <Progress2 />
-        </div>
+        <ProgressBar step={2} />
         <h1 className="font-[bold] text-navy-700 text-[30px] mt-[92px] w-full pl-[53px]">
           원하시는
-          <br />
-          <span className="text-primary">가격대</span>를 알려주세요
+          <span className="text-primary"> 가격대</span>를 <br /> 알려주세요
         </h1>
         <div className="mt-[180px] w-[277px]">
           <Slider.Root
@@ -49,7 +39,7 @@ const Onboarding2 = () => {
             <span>{fmt(price[1])}</span>
           </div>
         </div>
-        <div className="mt-[116px] w-full flex justify-end pr-6">
+        <div className="mt-[116px] w-full px-6 flex justify-end">
           <NextButton ment="다음" direction="onboarding3" />
         </div>
       </div>
