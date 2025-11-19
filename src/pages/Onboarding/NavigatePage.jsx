@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import PlusIcon from "../../assets/plusIcon.svg?react";
 import RightArrow from "../../assets/RightArrow.svg?react";
 import { useState, useEffect } from "react";
+import NextButton from "../../components/Onboarding/NextButton";
 
 const NavigatePage = () => {
   const [fadeIn, setFadeOut] = useState(false);
@@ -21,7 +22,7 @@ const NavigatePage = () => {
         fadeIn ? "opacity-100" : "opacity-0"
       }`}
     >
-      <div className="relative min-h-screen flex flex-col justify-center items-center w-[390px]">
+      <div className="relative min-h-screen flex flex-col justify-center items-center w-[390px] bg-white">
         <div className="text-navy-700 font-bold text-[30px] leading-tight mb-12 mt-18 -ml-10">
           <div>나에게 꼭 맞는</div>
           <div className="inline-flex items-center justify-center">
@@ -34,13 +35,9 @@ const NavigatePage = () => {
           <div className="absolute w-[300px] h-[25vh] -z-10 bg-primary blur-[8rem] rounded-full pointer-events-none animate-pulse bg-linear-to-b from-primary-300 to-primary" />
           <LogoColor />
         </div>
-        <Link
-          to="/survey"
-          className="mt-auto mb-30 text-navy-700 font-[bold] flex justify-center items-center gap-1.5 -mr-60"
-        >
-          시작하기
-          <RightArrow />
-        </Link>
+        <div className="mt-auto mb-30 -mr-60">
+          <NextButton ment="시작하기" direction="onboarding1" />
+        </div>
       </div>
     </div>
   );
