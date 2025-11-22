@@ -9,6 +9,8 @@ import Onboarding5 from "./pages/Onboarding/Onboarding5";
 import Loading from "./pages/Loading";
 import ResultPage from "./pages/ResultPage";
 import CheckPage from "./pages/Onboarding/CheckPage";
+import RecommendPage from "./pages/RecommendPage";
+import { DetailedPage } from "./pages/DetailedPage";
 import App from "./App.jsx";
 
 const router = createBrowserRouter([
@@ -26,6 +28,8 @@ const router = createBrowserRouter([
       { path: "check", element: <CheckPage /> },
       { path: "loading", element: <Loading /> },
       { path: "result", element: <ResultPage /> },
+      { path: "recommend", element: <RecommendPage /> },
+      { path: "detail", element: <DetailedPage /> },
     ],
   },
 ]);
